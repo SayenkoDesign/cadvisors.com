@@ -1,0 +1,26 @@
+{% extends 'layout/page.html.twig' %}
+{% block content %}
+    <div class="article">
+        <div class="article__float">
+            <h2 class="article__float__heading">{{ ACF.get_field("box_heading") }}:</h2>
+            <h4 class="article__float__subheading">{{ ACF.get_field("box_subheading") }}</h4>
+        </div>
+        <div class="article__content">
+            {% include "layout/navigation-alt.html.twig" %}
+            <h1 class="article__content__title">
+                {{ Post.title }}
+            </h1>
+            <div class="article__author">
+                <div class="article__author__name">
+                    {{ Post.author.first_name }} {{ Post.author.last_name }}
+                </div>
+                <div class="article__author__title">
+                    {{ Post.author.bio }}
+                </div>
+            </div>
+            <div class="article__content__content">
+                {{ Post.content | raw }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

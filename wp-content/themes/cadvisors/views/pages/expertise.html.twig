@@ -1,0 +1,35 @@
+{% extends 'layout/page.html.twig' %}
+{% block content %}
+    {% include 'layout/navigation.html.twig' %}
+    <div class="top_title">
+        <div class="row">
+            <div class="large-6 columns">
+                <a href="{{ WP.site_uri }}" class="top_title__link">
+                    Concentric
+                </a>
+            </div>
+            <div class="large-6 columns">
+                <h1 class="top_title__heading">{{ Post.title }}</h1>
+                <div class="top_title__content">
+                    {{ Post.content | raw }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flags">
+        <div class="flags__grid">
+            {% for flag in ACF.get_field("flags") %}
+                <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex={{ loop.index }} title="{{ flag.title }}">
+                    <img src="{{ flag.image }}" class="flags__grid_link__image">
+                </span>
+            {% endfor %}
+        </div>
+        <div class="flags__partners">
+            {% for partner in ACF.get_field("partners") %}
+                <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex={{ loop.index }} title="{{ partner.title }}">
+                    <img src="{{ partner.image }}" class="flags__grid_link__image">
+                </span>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

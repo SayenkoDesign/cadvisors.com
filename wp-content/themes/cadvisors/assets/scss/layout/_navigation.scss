@@ -1,0 +1,25 @@
+.navigation {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  &__list {
+    li {
+      margin-bottom: 2rem;
+    }
+    li:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  a {
+    color: #FFF;
+    text-transform: uppercase;
+    &:hover, &.active:hover {
+      background-color: #839CA9;
+      color: #FFF;
+    }
+    &.active {
+      background-color: #839CA9;
+    }
+  }
+}

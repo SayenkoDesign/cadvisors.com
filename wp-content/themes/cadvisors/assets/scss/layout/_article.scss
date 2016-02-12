@@ -1,0 +1,43 @@
+.article {
+  float: right;
+  min-height: 100%;
+  &__float {
+    position: absolute;
+    right: 40rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #221F20;
+    display: inline-block;
+    color: #FFF;
+    padding: 0.5rem;
+    &__heading {
+      font-size: rem-calc(22px);
+    }
+    &__subheading {
+      font-size: rem-calc(16px);
+    }
+  }
+
+  &__author {
+    &__name {
+      font-size: rem-calc(18px);
+    }
+    &__title {
+      font-size: rem-calc(14px);
+    }
+  }
+
+  &__content {
+    padding-top: 2rem;
+    width: 55rem;
+    padding-left: 20rem;
+    background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 40%);
+    min-height: 100%;
+    &__title {
+      font-size: rem-calc(22px);
+    }
+    &__content {
+
+    }
+  }
+}

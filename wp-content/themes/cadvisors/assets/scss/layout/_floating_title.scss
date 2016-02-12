@@ -1,0 +1,11 @@
+.floating_title {
+  margin-top: 4rem;
+  &__link {
+    font-size: rem-calc(64px);
+    color: $font-color;
+    text-shadow: 0 0 0.2rem #FFF;
+    &:hover, &:active {
+      color: $font-color;
+    }
+  }
+}

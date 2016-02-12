@@ -1,0 +1,21 @@
+.flags {
+  width: calc(100% - 200px);
+  &__grid {
+    width: 80%;
+    float: left;
+    padding-left: 0.5rem;
+    &__link {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__partners {
+    width: 20%;
+    float:left;
+    &__link {
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+}

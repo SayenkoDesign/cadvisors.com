@@ -1,0 +1,14 @@
+.floating_boxed_content{
+  &__box {
+    background-color: rgba(255,255,255,0.8);
+    width: 36rem;
+    padding: 1rem;
+    margin-top: 8rem;
+  }
+  &__heading {
+    font-size: rem-calc(20px);
+  }
+  &__content {
+
+  }
+}

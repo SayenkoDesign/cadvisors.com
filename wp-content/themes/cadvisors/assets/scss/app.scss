@@ -1,0 +1,24 @@
+@import "settings";
+@import "foundation";
+@include foundation-everything();
+@import "layout/floating_title";
+@import "layout/title_bar";
+@import "layout/top_title";
+@import "layout/floating_content";
+@import "layout/floating_boxed_content";
+@import "layout/article";
+@import "layout/flags";
+@import "layout/navigation";
+@import "layout/navigation_alt";
+@import "layout/footer";
+
+// use app.scss as the base styles
+
+
+body {
+  background-color: #001522;
+  color: #221F20;
+  background-image: url('../../images/598585589.jpg');
+  background-size: cover;
+  background-position: center;
+}

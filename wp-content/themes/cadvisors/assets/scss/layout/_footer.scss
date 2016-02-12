@@ -1,0 +1,11 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #FFF;
+  padding: 0.5rem;
+  &__link {
+    text-transform: uppercase;
+    color: $font-color;
+  }
+}

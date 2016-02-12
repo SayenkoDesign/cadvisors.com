@@ -1,0 +1,14 @@
+.floating_content {
+  &__inner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    background-color: #FFF;
+    font-size: rem-calc(28px);
+    padding: 1rem;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

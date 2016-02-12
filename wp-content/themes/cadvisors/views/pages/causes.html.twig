@@ -1,0 +1,19 @@
+{% extends 'layout/page.html.twig' %}
+{% block content %}
+    {% include 'layout/navigation.html.twig' %}
+    <div class="floating_title">
+        <div class="row column">
+            <a href="{{ WP.site_uri }}" class="floating_title__link">
+                Concentric
+            </a>
+        </div>
+    </div>
+    <div class="floating_boxed_content">
+        <div class="floating_boxed_content__box">
+            <h1 class="floating_boxed_content__heading">{{ Post.title }}</h1>
+            <div class="floating_boxed_content__content">
+                {{ Post.content | raw }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

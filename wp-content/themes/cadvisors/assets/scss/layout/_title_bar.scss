@@ -1,0 +1,10 @@
+.title_bar {
+  background-color: #FFF;
+  &__link {
+    font-size: rem-calc(64px);
+    color: $font-color;
+    &:hover, &:active {
+      color: $font-color;
+    }
+  }
+}

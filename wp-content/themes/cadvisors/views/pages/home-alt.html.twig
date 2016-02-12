@@ -1,0 +1,21 @@
+{% extends 'layout/page.html.twig' %}
+{% block content %}
+    <div class="title_bar">
+        <div class="row column">
+            <a href="{{ WP.site_uri }}" class="title_bar__link">
+                Concentric
+            </a>
+        </div>
+    </div>
+    {% include 'layout/navigation.html.twig' %}
+    {% for slide in ACF.get_field("slides") %}
+        <div class="floating_content">
+            <div class="hide"><img src="{{ slide.image }}" alt="" /></div>
+            <div class="row column">
+                <div class="floating_content__inner">
+                    {{ slide.tagline | raw }}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
