@@ -1,6 +1,7 @@
 .top_title {
-  margin-top: 4rem;
-  margin-bottom: 3rem;
+  background-color: #FFF;
+  color: $font-color;
+  padding: 1rem;
   &__link {
     font-size: rem-calc(64px);
     color: #FFF;
@@ -9,10 +10,22 @@
     }
   }
   &__heading {
-    color: #FFF;
+    color: $font-color;
     font-size: rem-calc(20px);
+    @include breakpoint(medium) {
+      color: #FFF;
+    }
   }
   &__content {
-    color: #FFF;
+    color: $font-color;
+    @include breakpoint(medium) {
+      color: #FFF;
+    }
+  }
+  @include breakpoint(medium) {
+    background-color: transparent;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    padding: 0;
   }
 }
