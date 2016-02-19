@@ -1,13 +1,13 @@
 {% extends 'layout/page.html.twig' %}
 {% block content %}
-    <div class="floating_title">
+    {% include 'layout/navigation.html.twig' %}
+    <div class="floating_title hide-for-small-only">
         <div class="row column">
             <a href="{{ WP.site_uri }}" class="floating_title__link">
                 Concentric
             </a>
         </div>
     </div>
-    {% include 'layout/navigation.html.twig' %}
     {% for slide in ACF.get_field("slides") %}
         <div class="floating_content">
             <div class="hide"><img src="{{ slide.image }}" alt="" /></div>

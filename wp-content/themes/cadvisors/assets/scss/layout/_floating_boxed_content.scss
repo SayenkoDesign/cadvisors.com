@@ -1,14 +1,15 @@
 .floating_boxed_content{
   &__box {
-    background-color: rgba(255,255,255,0.8);
-    width: 36rem;
+    background-color: #FFF;
     padding: 1rem;
-    margin-top: 8rem;
+    @include breakpoint(medium) {
+      margin-top: 8rem;
+      background-color: rgba(255,255,255,0.8);
+      width: calc(100% - 8rem);
+      max-width: 36rem;
+    }
   }
   &__heading {
     font-size: rem-calc(20px);
-  }
-  &__content {
-
   }
 }

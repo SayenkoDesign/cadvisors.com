@@ -1,14 +1,21 @@
 .floating_content {
+  background-color: #FFF;
   &__inner {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: inline-block;
     background-color: #FFF;
-    font-size: rem-calc(28px);
+    font-size: rem-calc(20px);
     padding: 1rem;
     p {
       margin-bottom: 0;
     }
+    @include breakpoint(medium){
+      font-size: rem-calc(28px);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+    }
+  }
+  @include breakpoint(medium){
+    background-color: transparent;
   }
 }

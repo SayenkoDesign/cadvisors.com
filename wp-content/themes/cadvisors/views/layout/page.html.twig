@@ -9,6 +9,12 @@
 </head>
 <body class="{{ WP.body_class() }}">
 <div class="wrapper">
+    <div class="title-bar text-right" data-responsive-toggle="menu-menu-1" data-hide-for="medium">
+        <a href="{{ WP.site_uri }}" class="float-left title-bar__link">
+            Concentric
+        </a>
+        <button class="menu-icon" type="button" data-toggle></button>
+    </div>
     {% block content %}
     {% endblock %}
     {% include 'layout/footer.html.twig' %}

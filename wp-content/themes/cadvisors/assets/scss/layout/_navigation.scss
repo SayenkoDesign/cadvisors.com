@@ -1,18 +1,24 @@
 .navigation {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  background-color: #FFF;
+  @include breakpoint(medium){
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   &__list {
-    li {
-      margin-bottom: 2rem;
-    }
-    li:last-of-type {
-      margin-bottom: 0;
+    @include breakpoint(medium){
+      li {
+        margin-bottom: 2rem;
+      }
+      li:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
   a {
-    color: #FFF;
+    color: $font-color;
     text-transform: uppercase;
     &:hover, &.active:hover {
       background-color: #839CA9;
@@ -20,6 +26,9 @@
     }
     &.active {
       background-color: #839CA9;
+    }
+    @include breakpoint(medium){
+      color: #FFF;
     }
   }
 }

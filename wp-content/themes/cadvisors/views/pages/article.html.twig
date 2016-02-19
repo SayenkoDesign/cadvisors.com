@@ -1,7 +1,7 @@
 {% extends 'layout/page.html.twig' %}
 {% block content %}
     <div class="article">
-        <div class="article__float">
+        <div class="article__float hide-for-small-only">
             <h2 class="article__float__heading">{{ ACF.get_field("box_heading") }}:</h2>
             <h4 class="article__float__subheading">{{ ACF.get_field("box_subheading") }}</h4>
         </div>
