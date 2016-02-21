@@ -28,12 +28,18 @@
     }
   }
   &__partners {
-    width: 20%;
-    float:left;
     &__image{
-      display: block;
-      width: 30%;
-      margin: 0 auto 1rem auto;
+      width: 15%;
+      margin-right: 4%;
+      @include breakpoint(medium) {
+        display: block;
+        width: 30%;
+        margin: 0 auto 1rem auto;
+      }
+    }
+    @include breakpoint(medium) {
+      width: 20%;
+      float:left;
     }
   }
   @include breakpoint(medium) {

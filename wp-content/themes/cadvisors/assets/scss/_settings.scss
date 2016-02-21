@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
 
+@font-face {
+  font-family: LuxuryGold;
+  src: url("../fonts/Luxury-Gold.otf") format("opentype");
+}
+
 $body-font-family: 'Roboto', sans-serif;
 $font-color: #221F20;
 

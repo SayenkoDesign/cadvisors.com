@@ -1,7 +1,7 @@
 .article {
   &__float {
     position: absolute;
-    right: 40rem;
+    right: 45rem;
     top: 50%;
     transform: translateY(-50%);
     background-color: #221F20;
@@ -36,7 +36,7 @@
     }
     @include breakpoint(medium) {
       padding-top: 2rem;
-      width: 55rem;
+      width: 60rem;
       padding-left: 20rem;
       background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 40%);
       min-height: 100%;

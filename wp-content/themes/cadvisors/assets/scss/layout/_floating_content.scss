@@ -13,6 +13,7 @@
       top: 50%;
       transform: translateY(-50%);
       display: inline-block;
+      margin-right: 10rem;
     }
   }
   @include breakpoint(medium){
