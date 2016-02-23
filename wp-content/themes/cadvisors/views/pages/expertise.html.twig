@@ -16,11 +16,11 @@
             </div>
         </div>
     </div>
-    <div class="flags">
+    <div class="flags clearfix">
         <div class="flags__grid">
             {% for flag in ACF.get_field("flags") %}
                 <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex={{ loop.index }} title="{{ flag.title }}">
-                    <img src="{{ flag.image }}" class="flags__grid_link__image">
+                    <img src="{{ flag.image }}" class="flags__grid__image">
                 </span>
             {% endfor %}
         </div>

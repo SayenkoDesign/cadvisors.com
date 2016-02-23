@@ -1,6 +1,7 @@
 .floating_title {
   font-family: LuxuryGold;
   &__link {
+    display: block;
     font-size: rem-calc(48px);
     color: #FFF;
     text-transform: uppercase;
@@ -10,7 +11,6 @@
     }
     &__sub {
       display: block;
-      marin-top: -0.5rem;
       font-size: rem-calc(22px);
     }
   }

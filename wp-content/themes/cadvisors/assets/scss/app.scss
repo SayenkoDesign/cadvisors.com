@@ -4,9 +4,11 @@
 @import "layout/floating_title";
 @import "layout/title_bar";
 @import "layout/top_title";
+@import "layout/mobile_header";
 @import "layout/floating_content";
 @import "layout/floating_boxed_content";
 @import "layout/article";
+@import "layout/archives";
 @import "layout/flags";
 @import "layout/navigation";
 @import "layout/navigation_alt";
@@ -15,11 +17,26 @@
 
 // use app.scss as the base styles
 
-
+body.logged-in {
+  padding-top: 46px;
+  @include breakpoint(783px){
+    padding-top: 32px;
+  }
+}
 body {
-  background-color: #001522;
+  background-color: #FFF;
   color: #221F20;
-  background-image: url('../../images/598585589.jpg');
   background-size: cover;
   background-position: center;
+  @include breakpoint(small only) {
+    background-image: none !important;
+  }
+}
+
+.wrapper {
+  @include breakpoint(medium) {
+    min-height: 100%;
+    padding-bottom: 4rem;
+    position: relative;
+  }
 }

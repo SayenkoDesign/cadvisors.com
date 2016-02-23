@@ -27,4 +27,8 @@ class Post
     {
         return get_the_content();
     }
+
+    public function permalink() {
+        return get_post_permalink();
+    }
 }

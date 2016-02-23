@@ -1,4 +1,15 @@
 .article {
+  width: 100%;
+  &__gradient {
+    width: 70rem;
+    background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 40%);
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
   &__float {
     position: absolute;
     right: 45rem;
@@ -35,10 +46,11 @@
 
     }
     @include breakpoint(medium) {
+      float: right;
+      background-color: transparent;
       padding-top: 2rem;
       width: 60rem;
       padding-left: 20rem;
-      background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 40%);
       min-height: 100%;
     }
   }

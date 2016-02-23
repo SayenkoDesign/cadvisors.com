@@ -3,7 +3,6 @@
   &__inner {
     background-color: #FFF;
     font-size: rem-calc(20px);
-    padding: 1rem;
     p {
       margin-bottom: 0;
     }
@@ -14,6 +13,7 @@
       transform: translateY(-50%);
       display: inline-block;
       margin-right: 10rem;
+      padding: 1rem;
     }
   }
   @include breakpoint(medium){

@@ -1,0 +1,39 @@
+.archives {
+  &__gradient {
+    width: 40rem;
+    background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%);
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  &__wrapper {
+    @include breakpoint(medium) {
+      padding-right: 20rem;
+    }
+  }
+  &__grid {
+    @include breakpoint(medium) {
+      padding: 2rem;
+      margin-top: 4rem;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+    &__title {
+      margin-bottom: 2rem;
+    }
+  }
+  .navigation_alt {
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+  }
+}
+.post_teaser {
+  @include breakpoint(medium) {
+    margin-bottom: 2rem;
+  }
+  &__link {
+    color: $font-color;
+  }
+}

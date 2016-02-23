@@ -1,0 +1,43 @@
+{% extends 'layout/page.html.twig' %}
+{% block content %}
+    {% include 'layout/floating-title.html.twig' %}
+    <div class="archives">
+        <div class="archives__gradient"></div>
+        {% include "layout/navigation-alt.html.twig" %}
+        <div class="row column">
+            <div class="archives__wrapper">
+                <div class="archives__grid">
+                    <h1 class="archives__grid__title">Archives</h1>
+                    <div class="row small-up-1 medium-up-2 large-up-4">
+                        {% for post in posts%}
+                            <div class="column">
+                                {{ post | raw }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    {% if WP.max_pages > 1 %}
+                        <ul class="pagination text-center" role="navigation" aria-label="Pagination">
+                            {% if WP.current_page == 1 %}
+                                <li class="disabled"><i class="fa fa-angle-double-left"></i></li>
+                            {% else %}
+                                <li><a href="{{ WP.page_link }}"><i class="fa fa-angle-double-left"></i></a></li>
+                            {% endif %}
+                            {% for i in 1..WP.max_pages %}
+                                {% if i == WP.current_page %}
+                                    <li class="current"><span class="show-for-sr">You're on page</span> {{ WP.current_page }}</li>
+                                {% else %}
+                                    <li><a href="{{ WP.page_link(i) }}" aria-label="Page 2">{{ i }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                            {% if WP.current_page == WP.max_pages %}
+                                <li class="disabled"><i class="fa fa-angle-double-right"></i></li>
+                            {% else %}
+                                <li><a href="{{ WP.page_link(WP.max_pages) }}"><i class="fa fa-angle-double-right"></i></a></li>
+                            {% endif %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -24,8 +24,8 @@
   }
   @include breakpoint(medium) {
     background-color: transparent;
-    margin-top: 4rem;
-    margin-bottom: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
     padding: 0;
   }
 }

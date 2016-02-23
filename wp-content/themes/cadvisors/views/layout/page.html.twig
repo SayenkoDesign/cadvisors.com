@@ -7,14 +7,30 @@
     <title>Foundation for Sites</title>
     {{ WP.header | raw }}
 </head>
-<body class="{{ WP.body_class() }}">
+<body class="{{ WP.body_class() }}"
+    {% if large_background is defined %}
+        style="background-image:url({{ large_background | raw }})"
+    {% elseif ACF.get_field("large_background") %}
+        style="background-image:url({{ ACF.get_field("large_background") }})"
+    {% endif %}
+>
+
 <div class="wrapper">
-    <div class="title-bar text-right" data-responsive-toggle="menu-menu-1" data-hide-for="medium">
+    <div class="title-bar text-right" data-responsive-toggle="mobile_menu" data-hide-for="medium">
         <a href="{{ WP.site_uri }}" class="float-left title-bar__link">
             Concentric
         </a>
         <button class="menu-icon" type="button" data-toggle></button>
     </div>
+    {{
+        WP.nav_menu({
+            'container_class': 'navigation',
+            'container_id': 'mobile_menu',
+            'menu_class': 'menu hide-for-medium vertical navigation__list',
+            'depth': 1
+        }) | raw
+    }}
+    {% include 'layout/mobile-image.html.twig' %}
     {% block content %}
     {% endblock %}
     {% include 'layout/footer.html.twig' %}

@@ -32,4 +32,20 @@ class WordPress
     {
         return join( ' ', get_body_class() );
     }
+
+    public function max_pages()
+    {
+        global $wp_query;
+        return $wp_query->max_num_pages;
+    }
+
+    public function current_page()
+    {
+        return get_query_var('paged');
+    }
+
+    public function page_link($page = 1, $escape = true)
+    {
+        return get_pagenum_link($page, $escape);
+    }
 }
