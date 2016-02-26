@@ -1,7 +1,6 @@
 .floating_content {
-  background-color: #FFF;
   &__inner {
-    background-color: #FFF;
+    background-color: rgba(255,255,255,0.8);
     font-size: rem-calc(20px);
     p {
       margin-bottom: 0;

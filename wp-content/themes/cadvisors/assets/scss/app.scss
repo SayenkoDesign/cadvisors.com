@@ -16,7 +16,12 @@
 @import "layout/footer";
 
 // use app.scss as the base styles
-
+html{
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
 body.logged-in {
   padding-top: 46px;
   @include breakpoint(783px){
@@ -24,6 +29,9 @@ body.logged-in {
   }
 }
 body {
+}
+
+.wrapper {
   background-color: #FFF;
   color: #221F20;
   background-size: cover;
@@ -31,12 +39,14 @@ body {
   @include breakpoint(small only) {
     background-image: none !important;
   }
-}
-
-.wrapper {
   @include breakpoint(medium) {
     min-height: 100%;
     padding-bottom: 4rem;
     position: relative;
   }
+}
+
+.sticky {
+  width: 100%;
+  margin-top: 0 !important;
 }

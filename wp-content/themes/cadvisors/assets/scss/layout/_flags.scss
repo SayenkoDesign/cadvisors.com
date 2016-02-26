@@ -6,6 +6,7 @@
       margin-right: 3.2%;
       margin-bottom: 1.5rem;
       border: none;
+      cursor: default;
       @include breakpoint(medium) {
         width: 12%;
         margin-right: 2.28%;

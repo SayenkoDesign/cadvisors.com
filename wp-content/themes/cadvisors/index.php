@@ -19,6 +19,7 @@ $data = [
 ];
 
 // select template and load template specific data
+setup_postdata($post);
 if(is_front_page()) {
     $template = 'pages/home.html.twig';
 } else if(is_single()) {

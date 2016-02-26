@@ -30,6 +30,10 @@
     margin-left: 2rem;
     padding-bottom: 1px;
     font-size: rem-calc(14px);
+    .current-menu-item a {
+      color: #57585B;
+      background: none;
+    }
     li {
       margin-bottom: 1rem;
     }

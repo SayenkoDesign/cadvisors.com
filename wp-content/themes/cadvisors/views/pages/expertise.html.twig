@@ -5,7 +5,11 @@
         <div class="row">
             <div class="large-6 columns hide-for-small-only">
                 <a href="{{ WP.site_uri }}" class="top_title__link">
-                    Concentric
+                    {% if ACF.get_field("logo") == "White" %}
+                        <img src="{{ WP.stylesheet_url }}/assets/images/logo-white.png" alt="">
+                    {% elseif ACF.get_field("logo") == "Black" %}
+                        <img src="{{ WP.stylesheet_url }}/assets/images/logo-black.png" alt="">
+                    {% endif %}
                 </a>
             </div>
             <div class="large-6 columns">
@@ -19,7 +23,7 @@
     <div class="flags clearfix">
         <div class="flags__grid">
             {% for flag in ACF.get_field("flags") %}
-                <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex={{ loop.index }} title="{{ flag.title }}">
+                <span class="has-tip">
                     <img src="{{ flag.image }}" class="flags__grid__image">
                 </span>
             {% endfor %}

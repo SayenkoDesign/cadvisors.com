@@ -1,12 +1,23 @@
 .footer {
-  background-color: #FFF;
+  position: relative;
   @include breakpoint(medium) {
+    background-color: #FFF;
+    color: $font-color;
     text-align: center;
     position: absolute;
     bottom: 0;
     width: 100%;
+    z-index: 2;
+  }
+  &__top {
+    background-color: #839CA9;
+    color: #FFF;
+    a, a:hover {
+      color: #FFF;
+    }
   }
   &__menu {
+    margin-top: rem-calc(4px);
     li.footer__menu__divider {
       @include breakpoint(small only) {
         display: none;
@@ -34,6 +45,6 @@
   }
   &__copyright {
     font-size: 12px;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem auto;
   }
 }

@@ -14,6 +14,7 @@
     font-size: rem-calc(20px);
     @include breakpoint(medium) {
       color: #FFF;
+      margin-top: 1.3rem;
     }
   }
   &__content {

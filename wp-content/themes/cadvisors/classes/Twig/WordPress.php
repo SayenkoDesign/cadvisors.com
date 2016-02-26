@@ -22,6 +22,11 @@ class WordPress
         return get_site_url();
     }
 
+    public function stylesheet_url()
+    {
+        return get_stylesheet_directory_uri();
+    }
+
     public function nav_menu($args = [])
     {
         $args['echo'] = false;

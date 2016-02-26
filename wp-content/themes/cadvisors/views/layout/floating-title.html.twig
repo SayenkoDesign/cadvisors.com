@@ -1,8 +1,18 @@
-<div class="floating_title hide-for-small-only">
-    <div class="row column">
-        <a href="{{ WP.site_uri }}" class="floating_title__link">
-            Concentric
-            <small class="floating_title__link__sub">Analysis. strategy. Action</small>
-        </a>
+{% if ACF.get_field("logo") == "None" %}
+{% elseif ACF.get_field("logo") == "White" %}
+    <div class="floating_title hide-for-small-only">
+        <div class="row column">
+            <a href="{{ WP.site_uri }}" class="floating_title__link">
+                <img src="{{ WP.stylesheet_url }}/assets/images/logo-white.png" alt="">
+            </a>
+        </div>
     </div>
-</div>
+{% elseif ACF.get_field("logo") == "Black" %}
+    <div class="floating_title hide-for-small-only">
+        <div class="row column">
+            <a href="{{ WP.site_uri }}" class="floating_title__link">
+                <img src="{{ WP.stylesheet_url }}/assets/images/logo-black.png" alt="">
+            </a>
+        </div>
+    </div>
+{% endif %}
