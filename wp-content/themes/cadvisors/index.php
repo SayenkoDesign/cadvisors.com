@@ -38,6 +38,8 @@ if(is_front_page()) {
         ]);
     }
     wp_reset_query();
+} else if (get_page_template_slug() == 'template-insights.php') {
+    $template = 'pages/insights.html.twig';
 } else if (get_page_template_slug() == 'template-alt-landing-page.php') {
     $template = 'pages/home-alt.html.twig';
 } else if (get_page_template_slug() == 'template-cyber.php') {

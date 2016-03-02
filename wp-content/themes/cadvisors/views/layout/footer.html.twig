@@ -1,15 +1,7 @@
 <div class="footer">
     <div class="footer__top">
         <div class="row column">
-            <ul class="vertical medium-horizontal menu footer__menu">
-                <li><a href="#" class="footer__link first">Seattle</a></li>
-                <li class="footer__menu__divider"> | </li>
-                <li><a href="#" class="footer__link">San Francisco</a></li>
-                <li class="footer__menu__divider"> | </li>
-                <li><a href="#" class="footer__link">415.329.6869</a></li>
-                <li class="footer__menu__divider"> | </li>
-                <li><a href="#" class="footer__link last">info@centricadvisors.com</a></li>
-            </ul>
+            {{ ACF.get_field('footer_content', 'options') | raw }}
         </div>
     </div>
     <div class="footer__bottom">

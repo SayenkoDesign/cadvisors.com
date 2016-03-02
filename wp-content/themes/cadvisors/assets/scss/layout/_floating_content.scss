@@ -6,7 +6,7 @@
       margin-bottom: 0;
     }
     @include breakpoint(medium){
-      font-size: rem-calc(28px);
+      font-size: rem-calc(24px);
       position: absolute;
       top: 50%;
       transform: translateY(-50%);

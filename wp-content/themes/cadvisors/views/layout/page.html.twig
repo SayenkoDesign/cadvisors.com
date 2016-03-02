@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>{% if Post.title %}{{ Post.title }}{% else %}Concentric Advisor - Analysis. Strategy. Action{% endif %}</title>
     {{ WP.header | raw }}
 </head>
 <body class="{{ WP.body_class() }}">
@@ -19,8 +19,8 @@
 >
     <div data-sticky data-sticky data-top-anchor="try" data-sticky-on="small">
         <div class="title-bar text-right" data-responsive-toggle="mobile_menu" data-hide-for="medium">
-            <a href="{{ WP.site_uri }}" class="float-left title-bar__link">
-                Concentric
+            <a href="{{ WP.site_uri }}" class="float-left text-left title-bar__link">
+                <img src="{{ ACF.get_field("black_logo", "options") }}" class="title-bar__link__image">
             </a>
             <button class="menu-icon" type="button" data-toggle></button>
         </div>

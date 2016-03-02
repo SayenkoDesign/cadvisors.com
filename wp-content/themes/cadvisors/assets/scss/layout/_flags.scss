@@ -36,27 +36,9 @@
       }
     }
     @include breakpoint(medium) {
-      width: 80%;
+      width: 100%;
       float: left;
       padding-left: 0.5rem;
-    }
-  }
-  &__partners {
-    &__image{
-      width: 15%;
-      margin-right: 3%;
-      @include breakpoint(medium) {
-        display: block;
-        width: 80%;
-        margin: 0 auto 1rem auto;
-      }
-      @include breakpoint(large) {
-        width: 30%;
-      }
-    }
-    @include breakpoint(medium) {
-      width: 20%;
-      float:left;
     }
   }
   @include breakpoint(medium) {

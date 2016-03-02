@@ -1,10 +1,13 @@
-.title_bar {
+.title-bar {
   background-color: #FFF;
+  text-transform: uppercase;
   &__link {
-    font-size: rem-calc(64px);
-    color: $font-color;
-    &:hover, &:active {
-      color: $font-color;
-    }
+    display: block;
+    float: left;
+    width: calc(100% - 3rem);
+  }
+  .menu-icon::after {
+    background-color: $font-color;
+    box-shadow: 0 7px 0 $font-color, 0 14px 0 $font-color;
   }
 }

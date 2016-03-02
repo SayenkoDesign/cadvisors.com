@@ -1,0 +1,11 @@
+.absolute_title__link {
+  display: none;
+  @include breakpoint(large) {
+    display: block;
+    display: block;
+    position: absolute;
+    left: calc(50% - 36.5rem);
+    top: 1.3rem;
+    z-index: 3;
+  }
+}

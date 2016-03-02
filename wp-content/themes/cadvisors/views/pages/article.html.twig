@@ -1,5 +1,12 @@
 {% extends 'layout/page.html.twig' %}
 {% block content %}
+    <a href="{{ WP.site_uri }}" class="absolute_title__link">
+        {% if ACF.get_field("logo") == "White" %}
+            <img src="{{ ACF.get_field("white_logo", "options") }}" alt="">
+        {% elseif ACF.get_field("logo") == "Black" %}
+            <img src="{{ ACF.get_field("black_logo", "options") }}" alt="">
+        {% endif %}
+    </a>
     <div class="article">
         <div class="article__gradient hide-for-small-only"></div>
         <div class="article__float hide-for-small show-for-large">

@@ -6,9 +6,9 @@
             <div class="large-6 columns hide-for-small-only">
                 <a href="{{ WP.site_uri }}" class="top_title__link">
                     {% if ACF.get_field("logo") == "White" %}
-                        <img src="{{ WP.stylesheet_url }}/assets/images/logo-white.png" alt="">
+                        <img src="{{ ACF.get_field("white_logo", "options") }}" alt="">
                     {% elseif ACF.get_field("logo") == "Black" %}
-                        <img src="{{ WP.stylesheet_url }}/assets/images/logo-black.png" alt="">
+                        <img src="{{ ACF.get_field("black_logo", "options") }}" alt="">
                     {% endif %}
                 </a>
             </div>
@@ -23,14 +23,9 @@
     <div class="flags clearfix">
         <div class="flags__grid">
             {% for flag in ACF.get_field("flags") %}
-                <span class="has-tip">
+                <span class="has-tip {% if flag.hide_on_mobile %}hide-for-small-only{% endif %}">
                     <img src="{{ flag.image }}" class="flags__grid__image">
                 </span>
-            {% endfor %}
-        </div>
-        <div class="flags__partners">
-            {% for partner in ACF.get_field("partners") %}
-                <img src="{{ partner.image }}" class="flags__partners__image">
             {% endfor %}
         </div>
     </div>
