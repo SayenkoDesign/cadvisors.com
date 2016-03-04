@@ -49,7 +49,7 @@ if(is_front_page()) {
 } else if (get_page_template_slug() == 'template-landing-page.php') {
     $template = 'pages/home.html.twig';
 } else {
-    $template = 'layout/page.html.twig';
+    $template = 'pages/page.html.twig';
 }
 
 // render

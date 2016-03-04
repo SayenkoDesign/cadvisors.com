@@ -1,5 +1,7 @@
 .floating_title {
   font-family: LuxuryGold;
+  position: relative;
+  z-index: 5;
   &__link {
     display: block;
     font-size: rem-calc(48px);

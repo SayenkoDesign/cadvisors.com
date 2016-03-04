@@ -1,6 +1,6 @@
 <?php
 require_once 'vendor/autoload.php';
-require_once 'acf.php';
+//require_once 'acf.php';
 $asset_path = get_stylesheet_directory_uri() . '/assets/build';
 
 //styles

@@ -1,0 +1,27 @@
+.navigation_alt_closed {
+  font-family: LuxuryGold;
+  display: inline-block;
+  float: right;
+  width: 16rem;
+  margin: 0 1rem 1rem 1rem;
+  position: relative;
+  z-index: 2;
+  &__list {
+    li {
+      margin-bottom: 2rem;
+    }
+    li:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  a {
+    color: #57585B;
+    text-transform: uppercase;
+    border: 1px solid #BBBDC0;
+    display: block;
+    &:hover, &.active:hover {
+      background-color: darken(#BBBDC0, 20%);
+      color: #57585B;
+    }
+  }
+}

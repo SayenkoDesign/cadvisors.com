@@ -7,6 +7,7 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 5;
   }
   &__list {
     @include breakpoint(medium){
@@ -19,7 +20,7 @@
     }
   }
   .current-menu-item a {
-    background-color: #839CA9;
+    background-color: $primary-color;
     color: #FFF;
   }
   a {
