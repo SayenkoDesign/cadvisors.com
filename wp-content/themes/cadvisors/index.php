@@ -22,6 +22,27 @@ $data = [
 setup_postdata($post);
 if(is_front_page()) {
     $template = 'pages/home.html.twig';
+
+    if(!session_id()){
+        session_start();
+    }
+
+    $slide_count = count(get_field("slide"));
+
+    if(!isset($_SESSION['shown_slides'])) {
+        $_SESSION['shown_slides'] = array();
+    } else if(count($_SESSION['shown_slides']) == $slide_count) {
+        $_SESSION['shown_slides'] = array();
+    }
+
+    $next_slide = mt_rand(1, $slide_count);
+    while(in_array($next_slide, $_SESSION['shown_slides'])) {
+        $next_slide = mt_rand(1, $slide_count);
+    }
+
+    $_SESSION['shown_slides'][] = $next_slide;
+    $data['next_slide'] = $next_slide;
+    $data['slide'] = get_field("slide")[$next_slide-1];
 } else if(is_single()) {
     $template = 'pages/article.html.twig';
 } else if (is_home()) {

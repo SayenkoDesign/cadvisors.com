@@ -1,10 +1,8 @@
 {% extends 'layout/page.html.twig' %}
 {% block content %}
     <div class="home-slider hide-for-small-only">
-        {% for slide in ACF.get_field("slide") %}
             <div
-                    class="home-slider__slide {% if loop.first %}active{% else %}background{% endif %}"
-                    id="slide{{ loop.index }}"
+                    class="home-slider__slide active"
                     style="background-image: url('{{ slide.image }}'); background-size: cover;"
             >
                 <div class="floating_content">
@@ -15,29 +13,14 @@
                     </div>
                 </div>
             </div>
-        {% endfor %}
     </div>
-    <div class="home-slider__bullets row column hide-for-small-only">
-        <ul class="menu">
-            {% for slide in ACF.get_field("slide") %}
-                <li class="home-slider__bullets__list">
-                    <a href="#"
-                       class="home-slider__bullets__bullet {% if loop.first %}active{% endif %}"
-                       data-slide="slide{{ loop.index }}">
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% for slide in ACF.get_field("slide") | slice(0,1) %}
-        <div class="floating_content hide-for-medium">
-            <div class="row column">
-                <div class="floating_content__inner">
-                    {{ slide.tagline | raw }}
-                </div>
+    <div class="floating_content hide-for-medium">
+        <div class="row column">
+            <div class="floating_content__inner">
+                {{ slide.tagline | raw }}
             </div>
         </div>
-    {% endfor %}
+    </div>
     {% include 'layout/navigation.html.twig' %}
     {% include 'layout/floating-title.html.twig' %}
 {% endblock %}
