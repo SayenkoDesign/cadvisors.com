@@ -9,7 +9,7 @@
     z-index: 2;
   }
   &__top {
-    background-color: $primary-color;
+    background-color: rgb(95, 138, 199);
     color: #FFF;
     text-transform: uppercase;
     a, a:hover {
@@ -21,7 +21,7 @@
     margin-top: rem-calc(4px);
     font-size: 0.7rem;
     li {
-      padding: 0.7rem 0.5rem;
+      padding: 0.5rem;
       &:first-of-type {
         padding-left: 0;
       }
@@ -38,7 +38,7 @@
       display: inline-block;
     }
     @include breakpoint(large){
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
   }
   &__link {

@@ -4,7 +4,7 @@
     padding: 1rem;
     @include breakpoint(medium) {
       margin-top: 8rem;
-      background-color: rgba(255,255,255,0.8);
+      background-color: rgba(255,255,255,0.6);
       width: calc(100% - 32rem);
       max-width: 36rem;
       &.large {

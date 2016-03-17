@@ -1,3 +1,8 @@
 <div class="mobile_header hide-for-medium">
-    <img src="{{ ACF.get_field("small_background") }}" alt="" class="mobile_header__image">
+
+    {% if slide is defined and slide.image is defined %}
+        <img src="{{ slide.image }}" alt="" class="mobile_header__image">
+    {% else %}
+        <img src="{{ ACF.get_field("small_background") }}" alt="" class="mobile_header__image">
+    {% endif %}
 </div>
