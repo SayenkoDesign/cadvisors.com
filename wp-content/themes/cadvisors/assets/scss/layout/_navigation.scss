@@ -20,14 +20,14 @@
     }
   }
   .current-menu-item a {
-    background-color: $primary-color;
+    background-color: #BBBDC0;
     color: #FFF;
   }
   a {
     color: $font-color;
     text-transform: uppercase;
     &:hover, &.active:hover {
-      background-color: #839CA9;
+      background-color: #BBBDC0;
       color: #FFF;
     }
     &.active {
