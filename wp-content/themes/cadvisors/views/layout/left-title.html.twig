@@ -1,0 +1,14 @@
+{% if ACF.get_field("logo") == "None" %}
+{% elseif ACF.get_field("logo") == "White" %}
+    <div class="left_title hide-for-small-only">
+        <a href="{{ WP.site_uri }}" class="floating_title__link">
+            <img src="{{ ACF.get_field("white_logo", "options") }}" alt="">
+        </a>
+    </div>
+{% elseif ACF.get_field("logo") == "Black" %}
+    <div class="left_title hide-for-small-only">
+        <a href="{{ WP.site_uri }}" class="floating_title__link">
+            <img src="{{ ACF.get_field("black_logo", "options") }}" alt="">
+        </a>
+    </div>
+{% endif %}

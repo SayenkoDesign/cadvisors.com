@@ -1,6 +1,7 @@
 @import "settings";
 @import "foundation";
 @include foundation-everything();
+@import "layout/left_title";
 @import "layout/floating_title";
 @import "layout/title_bar";
 @import "layout/top_title";

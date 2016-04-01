@@ -1,0 +1,24 @@
+.left_title {
+  font-family: LuxuryGold;
+  position: relative;
+  z-index: 5;
+  padding-left: 1rem;
+  &__link {
+    display: block;
+    font-size: rem-calc(48px);
+    color: #FFF;
+    text-transform: uppercase;
+    line-height: 1;
+    &:hover, &:active {
+      color: $font-color;
+    }
+    &__sub {
+      display: block;
+      font-size: rem-calc(22px);
+    }
+  }
+  @include breakpoint(medium){
+    font-size: rem-calc(64px);
+    padding-top: 4rem;
+  }
+}
