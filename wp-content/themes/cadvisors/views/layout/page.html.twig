@@ -11,12 +11,14 @@
 <body class="{{ WP.body_class() }}">
 
 <div class="wrapper clearfix"
-    {% if slide is defined and slide.image is defined %}
-        style="background-image:url({{ ACF.get_field("large_background") }})"
-    {% elseif large_background is defined %}
-        style="background-image:url({{ large_background | raw }})"
-    {% elseif ACF.get_field("large_background") %}
-        style="background-image:url({{ ACF.get_field("large_background") }})"
+    {% if hide_slides is not defined or not hide_slides %}
+        {% if slide is defined and slide.image is defined %}
+            style="background-image:url({{ ACF.get_field("large_background") }})"
+        {% elseif large_background is defined %}
+            style="background-image:url({{ large_background | raw }})"
+        {% elseif ACF.get_field("large_background") %}
+            style="background-image:url({{ ACF.get_field("large_background") }})"
+        {% endif %}
     {% endif %}
     data-sticky-container
 >

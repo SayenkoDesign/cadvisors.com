@@ -1,3 +1,6 @@
+@import "lib/slick/slick";
+@import "lib/slick/slick-theme";
+@import "lib/font-awesome/font-awesome";
 @import "settings";
 @import "foundation";
 @include foundation-everything();
@@ -53,4 +56,18 @@ body {
 .sticky {
   width: 100%;
   margin-top: 0 !important;
+}
+
+.no-js .top-bar {
+  display: none;
+}
+
+@media screen and (min-width: 40em) {
+  .no-js .top-bar {
+    display: block;
+  }
+
+  .no-js .title-bar {
+    display: none;
+  }
 }
