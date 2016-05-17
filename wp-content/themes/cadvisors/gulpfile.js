@@ -36,7 +36,7 @@ gulp.task('images', function(){
 });
 
 gulp.task('scripts', function(){
-    gulp.src(['node_modules/foundation-sites/dist/foundation.js', 'assets/js/app.js'])
+    gulp.src(['assets/lib/slick/slick.js', 'node_modules/foundation-sites/dist/foundation.js', 'assets/js/app.js'])
         .pipe(concat('app.js'))
         .pipe(plumber(plumberErrorHandler))
         .pipe(gulp.dest('assets/build/js'))
@@ -57,7 +57,7 @@ gulp.task('compass', function(){
             import_path: [
                 'node_modules/foundation-sites/scss'
             ],
-            style: 'nested',
+            style: 'compressed',
             comments: true,
             source_map: true,
             time: true
